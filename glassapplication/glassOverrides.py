@@ -1,4 +1,5 @@
 import json
+import erpnext
 
 import frappe
 from frappe import _, msgprint
@@ -89,9 +90,16 @@ def update_item(obj, target, source_parent):
 	if getdate(target.schedule_date) < getdate(nowdate()):
 		target.schedule_date = None
 
+
+
+
+		
+		
+
+
 @frappe.whitelist()
 def make_purchase_order(source_name, target_doc=None, args=None):
-	print("SHERIIIIIIIIIF")
+	
 	if args is None:
 		args = {}
 	if isinstance(args, str):
